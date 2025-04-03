@@ -1,0 +1,127 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Top Heading */
+.top-heading {
+    width: 100%; /* Full width */
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff; /* Blue background for the heading */
+    color: white; /* White text for contrast */
+    margin: 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.top-heading h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.top-heading h2 {
+    font-size: 20px;
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+
+/* Navigation Bar */
+.header {
+    display: flex;
+    justify-content: space-around; /* Spread buttons evenly */
+    align-items: center;
+    background-color: #343a40; /* Dark gray background */
+    padding: 15px 0;
+    width: 100%; /* Full width */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Main Content */
+.main-content {
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    max-width: 900px; /* Limit the width of the content */
+    text-align: center;
+}
+
+.main-content .welcome-section {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main-content .description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Wrap buttons to the next line on smaller screens */
+        gap: 10px;
+    }
+
+    .header button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .top-heading h1 {
+        font-size: 28px;
+    }
+
+    .top-heading h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header button {
+        width: 100%; /* Full-width buttons on very small screens */
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .top-heading h1 {
+        font-size: 24px;
+    }
+
+    .top-heading h2 {
+        font-size: 16px;
+    }
+}

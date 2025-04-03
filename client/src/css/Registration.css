@@ -1,0 +1,150 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Register Box */
+.register-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Title */
+.register-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+/* Success & Error Messages */
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Login text */
+.login-text {
+    margin-top: 15px;
+    color: #555;
+}
+
+.login-link {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.show-password input {
+    margin-right: 5px;
+}
+
+.toggle-password {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.toggle-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.toggle-switch.active {
+    background-color: #4caf50;
+}
+
+.toggle-slider {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.toggle-switch.active .toggle-slider {
+    transform: translateX(20px);
+}
+

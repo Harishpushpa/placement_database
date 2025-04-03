@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure body takes full height */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Scrollable Container */
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-height: 90vh; /* Limit height to 90% of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;
+    margin: 20px auto; /* Center the container */
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:first-of-type {
+    background-color: #007bff;
+    color: white;
+}
+
+button:first-of-type:hover {
+    background-color: #0056b3;
+}
+
+button:last-of-type {
+    background-color: #6c757d;
+    color: white;
+}
+
+button:last-of-type:hover {
+    background-color: #545b62;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
