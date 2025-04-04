@@ -9,11 +9,13 @@ export default function LoginPage() {
   const [error, setError] = useState("");  
   const navigate = useNavigate();
 
-
+  const presentdata = sessionStorage.getItem('userData');
   useEffect(() => {
     sessionStorage.clear();
     console.log("Session storage cleared.");
-    window.location.reload();
+    if(presentdata){
+      window.location.reload();
+    }
   }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
