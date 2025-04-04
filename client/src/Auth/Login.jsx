@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/loginpage.css';
+import '../css/loginpage.css'; // Import the CSS file
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -9,18 +9,12 @@ export default function LoginPage() {
   const [error, setError] = useState("");  
   const navigate = useNavigate();
 
+
   useEffect(() => {
-    // Check if we've already reloaded in this session
-    const hasReloadedThisSession = sessionStorage.getItem('hasReloadedLogin');
-
-    if (!hasReloadedThisSession) {
-      sessionStorage.clear();
-      sessionStorage.setItem('hasReloadedLogin', 'true');
-      console.log("Session storage cleared. Reloading...");
-      window.location.reload(); // Reload once
-    }
+    sessionStorage.clear();
+    console.log("Session storage cleared.");
+    window.location.reload();
   }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
