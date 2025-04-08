@@ -8,6 +8,9 @@ import LowerAcademicDetails from './userdata/LowerAcademicDetails'
 import { UpperAcademicDetails } from './userdata/UpperAcademicDetails'
 import { PrimaryData } from './userdata/PrimaryData'
 import CoCurricular from './userdata/CoCurricular'
+import Adminlogin from './Admin/AdminAuth/AdminLogin'
+import { AdminDesktop } from './Admin/AdminInterface/AdminDesktop'
+import { UpdateNews } from './Admin/Function/UpdateNews'
 
  const App = () => {
   return (
@@ -22,6 +25,9 @@ import CoCurricular from './userdata/CoCurricular'
         <Route path="/UpperAcademicDetails" element={<UpperAcademicDetails/>}/>
         <Route path="/PrimaryData" element={<PrimaryData/>}/>
         <Route path="/CoCurricular" element={<CoCurricular/>}/>
+        <Route path="Adminlogin" element={<Adminlogin/>}/>
+        <Route path="AdminDesktop" element={<AdminDesktop/>}/>
+        <Route path="/updatenews" element={<UpdateNews/>}/>
       </Routes>
     </Router>
   )

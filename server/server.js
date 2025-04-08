@@ -11,6 +11,16 @@ mongoose.connect('mongodb://localhost:27017/studentdata')
     .then(() => console.log('DB Connected'))
     .catch(err => console.log(`DB Error: ${err}`));
 
+const adminSchema=new mongoose.Schema({
+  email:{type:String,
+    required:true,
+    unique:true},
+  password:{type:String,
+    required:true},
+})
+
+const Admin=mongoose.model('Admin',adminSchema)
+
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -156,6 +166,26 @@ app.post("/login", async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 });
+
+app.post("/adminlogin",async(req,res)=>{
+  const {email,password}=req.body;
+
+  if(!email || !password){
+    return res.status(400).json({message:"Email and password are required"});
+  }
+
+  const AdminData = await Admin.findOne({email});
+  if(!AdminData){
+    return res.status(400).json({message:"Invalid email or password"});
+  }
+
+  if(AdminData.password !== password){
+    return res.status(400).json({message:"Invalid email or password"});
+  }
+
+  res.json({user:AdminData,message:"Admin logged in successfully"});
+
+})
 
 app.post("/update", async (req, res) => {
   try {
